@@ -110,7 +110,11 @@ Example usage
 mTracker$> edit
 	Please key in the index of instrument: 
 mTracker$> 1
-	Please key in index of the parameter to edit: 
+	Please key in index of the parameter to edit:
+		1) Name
+		2) Current Price
+		3) Sentiments
+		4) Remarks
 mTracker$> 2
 	Current Price: 
 mTracker$> 144.61
