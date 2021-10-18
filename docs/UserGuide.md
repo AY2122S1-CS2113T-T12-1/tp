@@ -96,14 +96,33 @@ Following the usage example above we would see the following message:
 Note: If any of the non-optional parameters `Name`, `Current price` and `Sentiment` are provided with invalid
 inputs, you would be prompted to give a valid input.
 
+### Editing an instrument: `edit`
+Edit an existing instrument.
 
+Format: `edit`
 
+Upon entering the command, a sequence of prompts would be displayed.
+1. Enter the instrument index.
+2. Choose the parameter to edit.
+
+Example usage
+```
+mTracker$> edit
+	Please key in the index of instrument: 
+mTracker$> 1
+	Please key in index of the parameter to edit: 
+mTracker$> 2
+	Current Price: 
+mTracker$> 144.61
+	Current Price change from 140.00 to 144.61
+mTracker$> 
+```
 
 ## FAQ
 
 **Q**: How do I transfer my data to another computer? 
 
-**A**: {your answer here}
+**A**: Locate text file named ` ` and transfer the file over to the other computer.
 
 ## Command Summary
 
