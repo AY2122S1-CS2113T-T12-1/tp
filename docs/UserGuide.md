@@ -96,7 +96,7 @@ Following the usage example above we would see the following message:
 Note: If any of the non-optional parameters `Name`, `Current price` and `Sentiment` are provided with invalid
 inputs, you would be prompted to give a valid input.
 
-### Editing an instrument: `edit`
+## Editing an instrument: `edit`
 Edit an existing instrument.
 
 Format: `edit`
