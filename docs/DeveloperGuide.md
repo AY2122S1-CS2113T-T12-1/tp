@@ -133,11 +133,27 @@ Command component:
 * The command classes are dependent on the `TextUi` class. This allows the command class to display its execution results to the user.
 
 ## Implementation
+This section goes through some details on how specific features are implemented.
+
 (for parser alternatives considered to design for inputs like
 "stock name/ price/ ...", "stock NAME PRICE" <- not very cli friendly with user having to recall all params,
 in addition without any 'markers' like name/ it is error prone when there 2 parameters of the same type,
 pros slightly simpler parser implementation with few add parser classes)
 (talk about how feature is implemented, why is it implemented that way, alternatives considered)
+
+### [Proposed] Multi-line input feature
+
+Proposed implementation
+
+The proposed Multi-line input feature is facilitated by the `InputParser` and `AddInstrumentParser`. It prompts the user
+to fill in the corresponding inputs by calling the `display` methods in the `TextUi` class. 
+It implements the following methods:
+* InputParser#getUserInput() -Gets the next line of input from the user
+* InputParser#getAddInstrumentParameters() -Gets the instrument type from user and returns an AddInstrumentCommand.
+* AddInstrumentParser#getInstrumentNameFromUser(String instrumentType) -Gets the instrument name from user.
+* AddInstrumentParser#getCurrentPriceFromUser() -Gets the current price from user.
+* AddInstrumentParser#getInstrumentSentimentFromUser() -Gets sentiment from user.
+
 
 ## Product scope
 ### Target user profile
