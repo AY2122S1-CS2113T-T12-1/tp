@@ -1,5 +1,6 @@
 package seedu.mtracker.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -137,6 +138,22 @@ public abstract class Instrument {
                 + SPACE + name + SEMICOLON_SEP + currentPrice + SEMICOLON_SEP + sentiment;
     }
 
+    public String remarkToString(String remark) {
+        String combineString = "";
+        String[] splitRemarks = remark.trim().split("\\s+");
+        ArrayList<String> splitRemarksWithSeparator = new ArrayList<>();
+        for (int i = 0; i < splitRemarks.length; i++) {
+            if (i % 13 == 0 && i != 0) {
+                splitRemarksWithSeparator.add("\n");
+            }
+            splitRemarksWithSeparator.add(splitRemarks[i]);
+            splitRemarksWithSeparator.add(" ");
+        }
+        for (int i = 0; i < splitRemarksWithSeparator.size(); i++) {
+            combineString += splitRemarksWithSeparator.get(i);
+        }
+        return combineString;
+    }
 
     public HashSet<String> getValidAttribute() {
         validAttribute.add(NAME_ATTRIBUTE);

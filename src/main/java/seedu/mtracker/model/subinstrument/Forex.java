@@ -153,7 +153,7 @@ public class Forex extends Instrument {
                 + ENTRY_PRICE_FIELD + entryPrice + System.lineSeparator()
                 + EXIT_PRICE_FIELD + exitPrice + System.lineSeparator()
                 + EXPIRY_FIELD + formatExpiry() + System.lineSeparator()
-                + REMARKS_FIELD + remark;
+                + REMARKS_FIELD + remarkToString(remark);
     }
 
     @Override
